@@ -1505,5 +1505,4 @@ Most of the taxonomy (§4) works well as fully open contribution — `requiremen
 - **Agent harness** — (v3, §17) an external system, not part of this dataset architecture, that loads/unloads separate standalone models in sequence to complete a multi-language task (e.g. HTML/CSS model → JS model), passing raw generated artifacts between them.
 - **Foundation-first training** — the initial training run using only the English foundation layer, with no language-specific bindings or code artifacts. Validates the skeleton taxonomy independently before any language work begins. See §1.1.
 
----#   L L M  
- 
+---#
