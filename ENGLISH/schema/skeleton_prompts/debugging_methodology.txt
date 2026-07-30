@@ -1,0 +1,40 @@
+# TEMPLATE_VERSION: debugging_v1
+# Category: debugging_methodology
+# Generates skeleton variants for systematic debugging reasoning
+
+Generate exactly {{target_count}} JSON skeleton variants for the following scenario.
+
+Category: debugging_methodology
+Subtype: {{subtype}}
+Difficulty: {{difficulty}}
+Abstraction level: {{abstraction_level}}
+Interaction format: single_turn
+Domain tags: {{tags}}
+
+Scenario seed: {{scenario_seed}}
+
+---
+Each variant must be a complete JSON object on its own line with these fields:
+
+- "type": "skeleton_variant"
+- "concept_id": "{{concept_id}}"
+- "category_version": 1
+- "interaction_format": "single_turn"
+- "abstraction_level": "{{abstraction_level}}"
+- "difficulty": "{{difficulty}}"
+- "slots": {
+    "SYMPTOM_DESCRIPTION": "what the user observes going wrong",
+    "FAILURE_CLASS": "the category of failure this likely belongs to",
+    "DIAGNOSTIC_APPROACH": "the reasoning method used to isolate the cause",
+    "ROOT_CAUSE": "the underlying cause identified",
+    "RESOLUTION": "how to fix or mitigate the issue"
+  }
+- "conversation": [
+    {"role": "user", "content": "Describes the problem: {{SYMPTOM_DESCRIPTION}}"},
+    {"role": "assistant", "content": "The assistant identifies this as a {{FAILURE_CLASS}} situation, applies {{DIAGNOSTIC_APPROACH}}, determines {{ROOT_CAUSE}}, and suggests {{RESOLUTION}}"}
+  ]
+
+The assistant's reasoning must follow the subtype's methodology.
+At metacognitive level, the assistant should reflect on *which* diagnostic approach to use, not just execute one.
+
+Output exactly {{target_count}} valid JSON objects, one per line.

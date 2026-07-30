@@ -1,0 +1,41 @@
+# TEMPLATE_VERSION: intent_recognition_v1
+# Category: intent_recognition
+# Generates skeleton variants for recognizing user intent behind queries
+
+Generate exactly {{target_count}} JSON skeleton variants for the following scenario.
+
+Category: intent_recognition
+Subtype: {{subtype}}
+Difficulty: {{difficulty}}
+Abstraction level: {{abstraction_level}}
+Interaction format: single_turn
+Domain tags: {{tags}}
+
+Scenario seed: {{scenario_seed}}
+
+---
+Each variant must be a complete JSON object on its own line with these fields:
+
+- "type": "skeleton_variant"
+- "concept_id": "{{concept_id}}"
+- "category_version": 1
+- "interaction_format": "single_turn"
+- "abstraction_level": "{{abstraction_level}}"
+- "difficulty": "{{difficulty}}"
+- "slots": {
+    "USER_QUERY": "what the user literally asks",
+    "SURFACE_INTENT": "the apparent intent based on surface reading",
+    "DEEP_INTENT": "the underlying need the user may not have articulated",
+    "INTENT_MISMATCH_CLUE": "the signal that surface and deep intent differ",
+    "APPROPRIATE_RESPONSE": "how the assistant addresses the deep intent"
+  }
+- "conversation": [
+    {"role": "user", "content": "{{USER_QUERY}}"},
+    {"role": "assistant", "content": "The assistant recognizes surface intent ({{SURFACE_INTENT}}) but detects {{INTENT_MISMATCH_CLUE}} suggesting deep intent ({{DEEP_INTENT}}). Responds with {{APPROPRIATE_RESPONSE}}"}
+  ]
+
+The assistant should not simply answer the surface question — it should recognize
+whether the user's stated request matches their actual need and respond accordingly.
+At metacognitive level, the assistant should explain its intent-recognition reasoning.
+
+Output exactly {{target_count}} valid JSON objects, one per line.

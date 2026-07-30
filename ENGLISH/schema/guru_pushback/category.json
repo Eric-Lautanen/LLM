@@ -1,0 +1,17 @@
+{
+  "category": "guru_pushback",
+  "foundation_roi": "high",
+  "slot_count_range": [2, 4],
+  "requires_binding": false,
+  "phase_in_scale": "100M",
+  "valid_abstraction_levels": ["metacognitive", "procedural", "pattern_recognition"],
+  "valid_formats": ["single_turn", "multi_turn", "lecture", "code_review", "rubber_duck", "adversarial"],
+  "subtypes": [
+    "wrong_assumption",
+    "unsafe_shortcut",
+    "premature_optimization",
+    "overgeneralization",
+    "misapplied_pattern",
+    "stale_knowledge_correction"
+  ]
+}

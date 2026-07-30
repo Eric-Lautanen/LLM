@@ -1,0 +1,17 @@
+{
+  "category": "intent_recognition",
+  "foundation_roi": "high",
+  "slot_count_range": [2, 5],
+  "requires_binding": false,
+  "phase_in_scale": "100M",
+  "valid_abstraction_levels": ["metacognitive", "procedural", "pattern_recognition"],
+  "valid_formats": ["single_turn", "multi_turn", "lecture", "rubber_duck", "adversarial"],
+  "subtypes": [
+    "question_type_classification",
+    "indirect_speech_act_recognition",
+    "multi_part_request_decomposition",
+    "negation_and_qualification_handling",
+    "user_expertise_and_urgency_signaling",
+    "implicit_intent_inference"
+  ]
+}

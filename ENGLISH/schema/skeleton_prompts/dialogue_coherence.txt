@@ -1,0 +1,39 @@
+# TEMPLATE_VERSION: dialogue_coherence_v1
+# Category: dialogue_coherence
+# Generates skeleton variants for maintaining coherent multi-turn dialogue
+
+Generate exactly {{target_count}} JSON skeleton variants for the following scenario.
+
+Category: dialogue_coherence
+Subtype: {{subtype}}
+Difficulty: {{difficulty}}
+Abstraction level: {{abstraction_level}}
+Interaction format: multi_turn
+Domain tags: {{tags}}
+
+Scenario seed: {{scenario_seed}}
+
+---
+Each variant must be a complete JSON object on its own line with these fields:
+
+- "type": "skeleton_variant"
+- "concept_id": "{{concept_id}}"
+- "category_version": 1
+- "interaction_format": "multi_turn"
+- "abstraction_level": "{{abstraction_level}}"
+- "difficulty": "{{difficulty}}"
+- "slots": {
+    "CONTEXT": "the ongoing conversation context",
+    "COHERENCE_CHALLENGE": "what threatens coherence (topic_drift / referential_ambiguity / anaphora_breakdown / inconsistency / contradiction / context_overload / rephrasing_failure)",
+    "COHERENT_RESPONSE": "the assistant's response that maintains coherence",
+    "RECOVERY_MOVE": "how the assistant recovers if coherence was lost"
+  }
+- "conversation": [
+    {"role": "user", "content": "{{CONTEXT}} — the user raises {{COHERENCE_CHALLENGE}}"},
+    {"role": "assistant", "content": "The assistant responds with {{COHERENT_RESPONSE}}, using {{RECOVERY_MOVE}} if needed"}
+  ]
+
+The dialogue should span multiple implied turns of context.
+The assistant must track references, maintain topic continuity, and handle rephrasing or self-correction naturally.
+
+Output exactly {{target_count}} valid JSON objects, one per line.

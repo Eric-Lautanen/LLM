@@ -1,0 +1,17 @@
+{
+  "category": "dialogue_coherence",
+  "foundation_roi": "high",
+  "slot_count_range": [2, 4],
+  "requires_binding": false,
+  "phase_in_scale": "100M",
+  "valid_abstraction_levels": ["metacognitive", "procedural", "pattern_recognition", "declarative"],
+  "valid_formats": ["single_turn", "multi_turn", "lecture", "rubber_duck"],
+  "subtypes": [
+    "discourse_context_maintenance",
+    "topic_shift_management",
+    "anaphora_and_reference_resolution",
+    "clarification_request_formulation",
+    "uncertainty_expression",
+    "conversation_summarization"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "generation_run": "v1_pass_1",
+  "lang_root": "..",
+  "active_providers": ["opencode", "nvidia_nim", "openrouter"],
+  "providers": {
+    "opencode": {
+      "api_base": "https://opencode.ai/zen/v1",
+      "api_key_env": "OPENCODE_ZEN_API_KEY",
+      "model": "opencode/kimi-k2.5-free",
+      "requests_per_minute": 30,
+      "concurrent": 2,
+      "input_price_per_mtok": 0.0,
+      "output_price_per_mtok": 0.0,
+      "temperature_sweep": [0.5, 0.7]
+    },
+    "nvidia_nim": {
+      "api_base": "https://integrate.api.nvidia.com/v1",
+      "api_key_env": "NVIDIA_API_KEY",
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+      "requests_per_minute": 40,
+      "concurrent": 2,
+      "input_price_per_mtok": 0.0,
+      "output_price_per_mtok": 0.0,
+      "temperature_sweep": [0.5, 0.7]
+    },
+    "openrouter": {
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "model": "openrouter/free",
+      "requests_per_minute": 20,
+      "concurrent": 1,
+      "input_price_per_mtok": 0.0,
+      "output_price_per_mtok": 0.0,
+      "temperature_sweep": [0.5, 0.7]
+    },
+    "mock": {
+      "api_base": "",
+      "api_key_env": "",
+      "model": "mock-model",
+      "concurrent": 10,
+      "input_price_per_mtok": 0.0,
+      "output_price_per_mtok": 0.0,
+      "temperature_sweep": [0.7]
+    }
+  },
+  "repair": {
+    "enabled": true,
+    "max_iterations": 3
+  },
+  "sanitize": {
+    "strip_emojis": true,
+    "normalize_unicode": "NFKC"
+  },
+  "dedup": {
+    "n_gram_size": 5,
+    "jaccard_threshold": 0.85
+  },
+  "temperature_sweep": [0.7],
+  "holdout_fraction": 0.1,
+  "lock_timeout_minutes": 30,
+  "max_workers": 2,
+  "target_count_default": 6
+}

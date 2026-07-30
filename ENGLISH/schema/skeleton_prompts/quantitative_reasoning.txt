@@ -1,0 +1,40 @@
+# TEMPLATE_VERSION: quant_reasoning_v1
+# Category: quantitative_reasoning
+# Generates skeleton variants for quantitative/estimation reasoning in SE contexts
+
+Generate exactly {{target_count}} JSON skeleton variants for the following scenario.
+
+Category: quantitative_reasoning
+Subtype: {{subtype}}
+Difficulty: {{difficulty}}
+Abstraction level: {{abstraction_level}}
+Interaction format: single_turn
+Domain tags: {{tags}}
+
+Scenario seed: {{scenario_seed}}
+
+---
+Each variant must be a complete JSON object on its own line with these fields:
+
+- "type": "skeleton_variant"
+- "concept_id": "{{concept_id}}"
+- "category_version": 1
+- "interaction_format": "single_turn"
+- "abstraction_level": "{{abstraction_level}}"
+- "difficulty": "{{difficulty}}"
+- "slots": {
+    "QUANTITATIVE_PROBLEM": "the quantitative situation or question",
+    "REASONING_TYPE": "the type of reasoning used (complexity_estimation / back_of_envelope_calculation / probability_for_testing / statistical_reasoning / boolean_and_logic / geometric_spatial_reasoning)",
+    "ASSUMPTIONS": "the assumptions made for the estimation",
+    "CALCULATION": "the step-by-step calculation or reasoning chain",
+    "RESULT": "the final numerical or logical conclusion"
+  }
+- "conversation": [
+    {"role": "user", "content": "Presents a quantitative problem: {{QUANTITATIVE_PROBLEM}}"},
+    {"role": "assistant", "content": "The assistant identifies this as {{REASONING_TYPE}}, states assumptions ({{ASSUMPTIONS}}), shows the calculation ({{CALCULATION}}), and gives the result ({{RESULT}})"}
+  ]
+
+The assistant should show its work — the reasoning chain is more important than the final number.
+At metacognitive level, the assistant should discuss *which* estimation approach is appropriate.
+
+Output exactly {{target_count}} valid JSON objects, one per line.

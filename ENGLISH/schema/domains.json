@@ -1,0 +1,31 @@
+{
+  "domain_version": 1,
+  "description": "Seed domains for first generation pass. New domains emerge organically from model-generated tags during generation (§14.6). Update aliases to canonicalize new clusters, never to restrict what the model can tag.",
+  "seed_domains": [
+    { "domain_id": "cli_tool", "category": "app", "parent": null, "desc": "CLI tools, REPLs" },
+    { "domain_id": "web_app", "category": "app", "parent": null, "desc": "Web apps, HTTP servers, browser UIs" },
+    { "domain_id": "calculator", "category": "app", "parent": null, "desc": "Any form of calculator" },
+    { "domain_id": "todo_app", "category": "app", "parent": null, "desc": "Task management, todo lists" },
+    { "domain_id": "video_editor", "category": "app", "parent": null, "desc": "Video editing, encoding" },
+    { "domain_id": "chat_app", "category": "app", "parent": null, "desc": "Chat, messaging, real-time communication" },
+    { "domain_id": "e_commerce", "category": "app", "parent": null, "desc": "E-commerce, shopping cart, checkout" },
+    { "domain_id": "api_service", "category": "app", "parent": null, "desc": "REST/GraphQL/gRPC API backends" },
+    { "domain_id": "data_pipeline", "category": "app", "parent": null, "desc": "ETL, batch processing, data transformation" },
+    { "domain_id": "devtool", "category": "app", "parent": null, "desc": "Developer tools, linters, formatters, generators" },
+    { "domain_id": "game", "category": "app", "parent": null, "desc": "Games, game engines, real-time rendering" },
+    { "domain_id": "mobile_app", "category": "app", "parent": null, "desc": "Mobile applications (iOS, Android)" },
+    { "domain_id": "filesystem_io", "category": "tech", "parent": null, "desc": "File I/O, path handling, directories" },
+    { "domain_id": "networking", "category": "tech", "parent": null, "desc": "TCP/UDP, HTTP, DNS, sockets" },
+    { "domain_id": "concurrency", "category": "tech", "parent": null, "desc": "Threads, async, locks, races, deadlocks" },
+    { "domain_id": "memory_management", "category": "tech", "parent": null, "desc": "Allocation, GC, leaks, ownership" },
+    { "domain_id": "authentication", "category": "tech", "parent": null, "desc": "AuthN: passwords, tokens, OAuth, sessions" },
+    { "domain_id": "serialization", "category": "tech", "parent": null, "desc": "JSON, protobuf, msgpack, binary formats" },
+    { "domain_id": "database_query", "category": "tech", "parent": null, "desc": "SQL, query optimization, indexing" },
+    { "domain_id": "error_handling", "category": "tech", "parent": null, "desc": "Error types, propagation, recovery, logging" },
+    { "domain_id": "testing", "category": "tech", "parent": null, "desc": "Unit, integration, property-based, mocking" },
+    { "domain_id": "performance", "category": "tech", "parent": null, "desc": "Optimization, profiling, benchmarking" },
+    { "domain_id": "security", "category": "tech", "parent": null, "desc": "Secure coding, vulnerabilities, hardening" },
+    { "domain_id": "state_machine", "category": "tech", "parent": null, "desc": "State machines, workflows, transitions" }
+  ],
+  "aliases": {}
+}

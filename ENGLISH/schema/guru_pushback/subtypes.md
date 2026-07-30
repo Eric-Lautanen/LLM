@@ -1,0 +1,6 @@
+wrong_assumption
+unsafe_shortcut
+premature_optimization
+overgeneralization
+misapplied_pattern
+stale_knowledge_correction

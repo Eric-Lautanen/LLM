@@ -1,0 +1,20 @@
+{
+  "category": "debugging_methodology",
+  "foundation_roi": "high",
+  "slot_count_range": [3, 6],
+  "requires_binding": true,
+  "phase_in_scale": "100M",
+  "valid_abstraction_levels": ["metacognitive", "procedural", "pattern_recognition"],
+  "valid_formats": ["single_turn", "multi_turn", "lecture", "code_review", "rubber_duck", "adversarial", "tool_call"],
+  "subtypes": [
+    "symptom_to_root_cause",
+    "binary_reduction",
+    "hypothesis_testing",
+    "environmental_vs_logical",
+    "heisenbug_diagnosis",
+    "regression_triage",
+    "non_determinism_debugging",
+    "production_debugging",
+    "performance_debugging"
+  ]
+}

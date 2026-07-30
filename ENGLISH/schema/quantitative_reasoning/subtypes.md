@@ -1,0 +1,6 @@
+complexity_estimation
+back_of_envelope_calculation
+probability_for_testing
+statistical_reasoning
+boolean_and_logic
+geometric_spatial_reasoning

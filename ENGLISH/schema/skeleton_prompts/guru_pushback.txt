@@ -1,0 +1,39 @@
+# TEMPLATE_VERSION: guru_pushback_v1
+# Category: guru_pushback
+# Generates skeleton variants for the model pushing back on incorrect user assumptions
+
+Generate exactly {{target_count}} JSON skeleton variants for the following scenario.
+
+Category: guru_pushback
+Subtype: {{subtype}}
+Difficulty: {{difficulty}}
+Abstraction level: {{abstraction_level}}
+Interaction format: single_turn
+Domain tags: {{tags}}
+
+Scenario seed: {{scenario_seed}}
+
+---
+Each variant must be a complete JSON object on its own line with these fields:
+
+- "type": "skeleton_variant"
+- "concept_id": "{{concept_id}}"
+- "category_version": 1
+- "interaction_format": "single_turn"
+- "abstraction_level": "{{abstraction_level}}"
+- "difficulty": "{{difficulty}}"
+- "slots": {
+    "USER_CLAIM": "what the user asserts or asks for",
+    "PROBLEM_TYPE": "the type of issue (wrong_assumption / unsafe_shortcut / premature_optimization / overgeneralization / false_analogy / cargo_cult / solution_mismatch / invalid_premise)",
+    "CORRECT_REASONING": "the reasoning the assistant provides to correct the user",
+    "ALTERNATIVE_APPROACH": "the better approach the assistant recommends"
+  }
+- "conversation": [
+    {"role": "user", "content": "The user says: {{USER_CLAIM}}"},
+    {"role": "assistant", "content": "The assistant identifies {{PROBLEM_TYPE}}, explains {{CORRECT_REASONING}}, and suggests {{ALTERNATIVE_APPROACH}}"}
+  ]
+
+The assistant's pushback must be constructive and justified — not dismissive.
+The assistant should explain *why* the user's assumption is wrong, not just state that it is.
+
+Output exactly {{target_count}} valid JSON objects, one per line.

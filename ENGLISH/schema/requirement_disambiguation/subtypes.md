@@ -1,0 +1,6 @@
+missing_context
+ambiguous_wording
+contradictory_goals
+implicit_assumptions
+underspecified_boundary
+unstated_constraint

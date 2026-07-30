@@ -1,0 +1,289 @@
+{
+  "slot_fills_version": 1,
+  "description": "Generic English fillers for SLOT markers. Used during foundation-only training pass. Coding-language bindings use their own slot-fill dictionaries.",
+  "entries": {
+    "SYMPTOM_DESCRIPTION": [
+      "the application produces intermittent failures",
+      "a service becomes unresponsive periodically",
+      "the system logs show transient errors",
+      "a process crashes without an obvious pattern",
+      "an operation succeeds sometimes and fails at other times"
+    ],
+    "FAILURE_CLASS": [
+      "a race condition between concurrent access paths",
+      "a resource leak under sustained load",
+      "an unhandled edge case in the control flow",
+      "a protocol mismatch between communicating components",
+      "a configuration drift across deployment environments"
+    ],
+    "ROOT_CAUSE": [
+      "improper synchronization between concurrent operations",
+      "insufficient isolation between independent operations",
+      "a missing validation step before a state transition",
+      "an assumption about ordering that is not guaranteed",
+      "a capacity limit not accounted for in the design"
+    ],
+    "DIAGNOSTIC_APPROACH": [
+      "systematic binary reduction to isolate the failure domain",
+      "hypothesis-driven testing with controlled experiments",
+      "comparison of working and non-working environments",
+      "incremental rollback to identify the change that introduced the fault",
+      "instrumentation-based observation of the failure path"
+    ],
+    "RESOLUTION": [
+      "adding proper synchronization around the shared resource",
+      "implementing validation before the state transition",
+      "redesigning the component to eliminate the unsafe assumption",
+      "introducing a circuit breaker to handle the capacity limit gracefully",
+      "refactoring to remove the ordering dependency"
+    ],
+    "VAGUE_REQUIREMENT": [
+      "make the system faster",
+      "we need a notification feature",
+      "the application should handle errors better",
+      "build a report dashboard",
+      "make the login process more secure",
+      "the system should be more scalable",
+      "add search functionality"
+    ],
+    "AMBIGUITY_TYPE": [
+      "the requirement is missing context about when this matters",
+      "the wording is ambiguous about which behavior is expected",
+      "the stated goals contradict each other under certain conditions",
+      "the user is assuming a solution without stating the actual goal",
+      "the boundary of the feature is underspecified"
+    ],
+    "CLARIFYING_QUESTION": [
+      "a question that narrows down the specific scenario to clarify what is actually needed",
+      "a question that distinguishes between alternative interpretations of the requirement",
+      "a question that explores the tradeoffs between the stated goals",
+      "a question that uncovers the unstated assumption behind the request",
+      "a question that defines the boundary of the feature"
+    ],
+    "USER_CLAIM": [
+      "we should rewrite everything in Rust for performance",
+      "just add a try-catch around the entire function",
+      "the simplest solution is to use a singleton",
+      "we don't need tests for this, it's straightforward",
+      "this bug is obviously caused by the database driver",
+      "using microservices will solve our scalability problems",
+      "we should parallelize everything to make it faster"
+    ],
+    "PROBLEM_TYPE": [
+      "the user is making a wrong assumption about the cause of the problem",
+      "the user is suggesting an approach that introduces unnecessary risk",
+      "the user is optimizing prematurely without evidence of a bottleneck",
+      "the user is overgeneralizing from a single case to all cases",
+      "the user is drawing a false analogy between unrelated domains",
+      "the user is cargo-culting a pattern without understanding why it works"
+    ],
+    "CORRECT_REASONING": [
+      "explains why the stated approach does not address the actual problem",
+      "identifies the specific flaw in the user's reasoning chain",
+      "shows why the suggested solution introduces new problems while not solving the original one",
+      "demonstrates the relevant tradeoffs the user has not considered",
+      "presents a concrete counterexample that invalidates the user's assumption"
+    ],
+    "ALTERNATIVE_APPROACH": [
+      "a better approach that addresses the root concerns without the drawbacks",
+      "a more targeted solution that matches the actual problem scope",
+      "a safer incremental approach that preserves existing guarantees",
+      "a well-known pattern that fits this situation better",
+      "a simpler solution that avoids unnecessary complexity"
+    ],
+    "USER_QUERY": [
+      "how do I make this code run faster",
+      "can you generate a complete e-commerce platform",
+      "tell me everything about database indexing",
+      "which programming language is the best",
+      "is there a bug in this framework's library",
+      "why is my code not working",
+      "this algorithm is broken, rewrite it"
+    ],
+    "SURFACE_INTENT": [
+      "the user appears to want a performance optimization recommendation",
+      "the user appears to be asking for full application code generation",
+      "the user appears to want a comprehensive tutorial on a topic",
+      "the user appears to be asking for a subjective comparison",
+      "the user appears to be reporting a defect in an external library"
+    ],
+    "DEEP_INTENT": [
+      "the user actually needs help identifying the specific bottleneck before optimizing",
+      "the user needs guidance on architecture rather than a complete implementation",
+      "the user needs a targeted answer to a specific question within the broader topic",
+      "the user needs to understand the tradeoffs between options in their specific context",
+      "the user needs help diagnosing their own code rather than blaming the library"
+    ],
+    "INTENT_MISMATCH_CLUE": [
+      "the request is too broad for the implied context",
+      "the user is asking for a solution but describing symptoms of a different problem",
+      "the question assumes a premise that does not match the situation described",
+      "the user's framing reveals they have not yet identified the actual decision point",
+      "the level of detail in the request does not match the scope implied"
+    ],
+    "APPROPRIATE_RESPONSE": [
+      "addresses the deep intent while acknowledging the surface question",
+      "first clarifies the actual need before providing the requested information",
+      "redirects to the more relevant question while explaining why",
+      "provides a framework for the user to make their own decision rather than a direct answer",
+      "asks a diagnostic question to narrow down the actual need"
+    ],
+    "QUANTITATIVE_PROBLEM": [
+      "estimate the time complexity of this nested loop structure for a given input size",
+      "calculate the probability of test flakiness given a flake rate per run",
+      "estimate how much memory this data structure will consume for N elements",
+      "determine whether a binary search or hash lookup is more efficient for this access pattern",
+      "calculate the expected number of comparisons in this randomized algorithm",
+      "estimate the throughput ceiling for this producer-consumer pipeline",
+      "determine the probability that a test suite with given coverage misses a specific defect"
+    ],
+    "REASONING_TYPE": [
+      "this requires complexity estimation of the algorithm given the input characteristics",
+      "this requires a back-of-envelope calculation to get an approximate bound",
+      "this requires probability reasoning about the likelihood of events in testing",
+      "this requires statistical reasoning about the distribution of outcomes",
+      "this requires boolean logic to reason about the possible states",
+      "this requires geometric or spatial reasoning about the data layout"
+    ],
+    "ASSUMPTIONS": [
+      "assuming the input is uniformly distributed and the data structure is balanced",
+      "assuming independent events and worst-case bounds for the calculation",
+      "assuming the flake rate is constant and tests are independent",
+      "assuming the common case dominates and edge cases are negligible for the estimate",
+      "assuming the underlying distribution is approximately normal"
+    ],
+    "CALCULATION": [
+      "shows the step-by-step derivation from first principles to the final estimate",
+      "breaks down the problem into constituent parts and sums the contributions",
+      "applies the relevant formula with the given parameters and explains each term",
+      "uses an order-of-magnitude approach with explicit bounds on the approximation error",
+      "compares the result to a known reference point to validate plausibility"
+    ],
+    "RESULT": [
+      "the final numerical estimate with appropriate significant figures",
+      "the expected bound expressed in big-O notation",
+      "the probability expressed as a range with confidence qualifiers",
+      "the recommended threshold or limit with margin-of-safety reasoning",
+      "the decision recommendation based on the quantitative comparison"
+    ],
+    "CONTEXT": [
+      "an ongoing debugging conversation where the assistant has already asked several diagnostic questions",
+      "a multi-turn design discussion where the assistant has suggested an architecture and the user is asking follow-ups",
+      "a code review session where the assistant has pointed out issues and the user is defending their choices",
+      "a teaching conversation where the assistant has been explaining a concept over several exchanges",
+      "a troubleshooting session where multiple potential causes have been explored across previous turns"
+    ],
+    "COHERENCE_CHALLENGE": [
+      "the user suddenly changes the topic without signaling the transition",
+      "the user refers to a concept from earlier using a vague pronoun with an unclear referent",
+      "the user rephrases their earlier question in a way that contradicts their initial framing",
+      "the user asks about something that was clarified two turns ago, requiring retrieval of earlier context",
+      "the user makes a statement that logically contradicts something they established earlier"
+    ],
+    "COHERENT_RESPONSE": [
+      "maintains the thread by explicitly connecting the new query to the established context",
+      "resolves the referential ambiguity by restating the referent before answering",
+      "navigates the contradiction by acknowledging the shift and checking intent",
+      "retrieves the earlier context and re-frames the answer within the ongoing discussion",
+      "smoothly transitions while preserving the conversational thread"
+    ],
+    "RECOVERY_MOVE": [
+      "acknowledges the topic shift and explicitly connects it to the previous discussion",
+      "asks for clarification when the referent is ambiguous",
+      "gently notes the contradiction and offers to revisit which framing the user prefers",
+      "summarizes the relevant context before providing the new answer",
+      "validates the user's new direction while restating what was established previously"
+    ],
+    "ALGORITHM_NAME": [
+      "a divide-and-conquer approach",
+      "a hash-based lookup strategy",
+      "a greedy selection heuristic",
+      "a balanced tree structure",
+      "a graph traversal algorithm"
+    ],
+    "COMPLEXITY_CLASS": [
+      "linear time in the input size",
+      "logarithmic time with respect to the dataset size",
+      "quadratic time with respect to the number of elements",
+      "exponential time in the depth of the decision tree",
+      "polynomial time bounded by the product of the dimensions"
+    ],
+    "TRADEOFF_DESCRIPTION": [
+      "a tradeoff between memory usage and execution speed",
+      "a tradeoff between code simplicity and runtime performance",
+      "a tradeoff between immediate solution speed and long-term maintainability",
+      "a tradeoff between accuracy and computational cost",
+      "a tradeoff between consistency and availability"
+    ],
+    "TOOL_CALL": [
+      "run a diagnostic command against the running system",
+      "retrieve the relevant configuration values",
+      "query the monitoring system for the recent metrics",
+      "inspect the state of the current execution environment",
+      "fetch the latest set of known failures from the issue tracker"
+    ],
+    "USER_INTENT": [
+      "the user wants to fix the immediate symptom without investigating the root cause",
+      "the user is asking for a quick workaround rather than a proper solution",
+      "the user wants a detailed explanation of the underlying mechanism",
+      "the user is requesting a code review but actually needs design guidance",
+      "the user is reporting a symptom that suggests a different category of problem than they believe"
+    ],
+    "BOUNDARY_CONDITION": [
+      "when the input size exceeds the available memory",
+      "when multiple clients access the resource concurrently",
+      "when the system runs continuously beyond a certain duration",
+      "when the input contains values near the extreme ends of the valid range",
+      "when the external dependency is unavailable or slow"
+    ],
+    "REFACTORING_GOAL": [
+      "reduce duplication between similar code paths",
+      "improve the separation of concerns between layers",
+      "make the control flow easier to follow",
+      "align the implementation with the intended abstraction",
+      "remove unused or dead code paths"
+    ],
+    "MATH_EXPRESSION": [
+      "the sum of the first N natural numbers",
+      "the probability of this event occurring at least once in N independent trials",
+      "the expected number of comparisons in a randomized search",
+      "the order of growth for this nested loop structure",
+      "the number of distinct paths through this decision tree"
+    ],
+    "PROGRAM_OUTPUT": [
+      "an incorrect numeric result for certain edge cases",
+      "a segmentation fault when the input is empty",
+      "an unexpected type error at runtime",
+      "a silent data corruption that only manifests in specific conditions",
+      "an off-by-one error in the boundary handling"
+    ],
+    "PROGRAM_INPUT": [
+      "a list of records from an external data source",
+      "a configuration file with parameters for the execution",
+      "a stream of events generated by user interactions",
+      "a set of constraints that define the valid solution space",
+      "a query string with filtering and sorting parameters"
+    ],
+    "BOUNDARY_DESCRIPTION": [
+      "the point at which the system behavior changes due to a resource constraint",
+      "the threshold beyond which the algorithm's performance degrades significantly",
+      "the edge case where the input transitions from valid to invalid",
+      "the limit at which the simplifying assumptions break down",
+      "the corner of the parameter space where unexpected interactions occur"
+    ],
+    "HYPOTHESIS": [
+      "the failure is caused by a specific configuration change in the last deployment",
+      "the root cause is a race condition between two specific threads",
+      "the symptom is a secondary effect of a different underlying fault",
+      "the issue is related to a specific environmental factor",
+      "the behavior is caused by a known limitation of the library version in use"
+    ],
+    "TEST_CASE": [
+      "a unit test that validates the behavior with a minimal reproducing input",
+      "an integration test that exercises the interaction between the two components",
+      "a property-based test that checks the invariant across random inputs",
+      "a regression test that covers the previously failing case",
+      "a stress test that pushes the system beyond normal operating bounds"
+    ]
+  }
+}

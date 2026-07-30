@@ -1,0 +1,38 @@
+# TEMPLATE_VERSION: req_disambig_v1
+# Category: requirement_disambiguation
+# Generates skeleton variants for ambiguous/underspecified SE requirements
+
+Generate exactly {{target_count}} JSON skeleton variants for the following scenario.
+
+Category: requirement_disambiguation
+Subtype: {{subtype}}
+Difficulty: {{difficulty}}
+Abstraction level: {{abstraction_level}}
+Interaction format: single_turn
+Domain tags: {{tags}}
+
+Scenario seed: {{scenario_seed}}
+
+---
+Each variant must be a complete JSON object on its own line with these fields:
+
+- "type": "skeleton_variant"
+- "concept_id": "{{concept_id}}"
+- "category_version": 1
+- "interaction_format": "single_turn"
+- "abstraction_level": "{{abstraction_level}}"
+- "difficulty": "{{difficulty}}"
+- "slots": {
+    "VAGUE_REQUIREMENT": "the ambiguous requirement statement from the user",
+    "AMBIGUITY_TYPE": "what kind of ambiguity (missing context / ambiguous wording / contradictory goals / implicit assumptions / underspecified boundary / unstated constraint)",
+    "CLARIFYING_QUESTION": "the question the assistant asks to disambiguate"
+  }
+- "conversation": [
+    {"role": "user", "content": "The user states {{VAGUE_REQUIREMENT}}"},
+    {"role": "assistant", "content": "The assistant identifies the {{AMBIGUITY_TYPE}} and asks {{CLARIFYING_QUESTION}}"}
+  ]
+
+The conversation must demonstrate the reasoning move specified by the subtype.
+The assistant should push back helpfully (guru behavior), not just accept the vague requirement.
+
+Output exactly {{target_count}} valid JSON objects, one per line.

@@ -1,0 +1,6 @@
+question_type_classification
+indirect_speech_act_recognition
+multi_part_request_decomposition
+negation_and_qualification_handling
+user_expertise_and_urgency_signaling
+implicit_intent_inference

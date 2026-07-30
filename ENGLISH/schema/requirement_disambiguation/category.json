@@ -1,0 +1,17 @@
+{
+  "category": "requirement_disambiguation",
+  "foundation_roi": "high",
+  "slot_count_range": [3, 5],
+  "requires_binding": false,
+  "phase_in_scale": "100M",
+  "valid_abstraction_levels": ["metacognitive", "procedural", "pattern_recognition", "declarative"],
+  "valid_formats": ["single_turn", "multi_turn", "lecture", "code_review", "rubber_duck", "adversarial"],
+  "subtypes": [
+    "missing_context",
+    "ambiguous_wording",
+    "contradictory_goals",
+    "implicit_assumptions",
+    "underspecified_boundary",
+    "unstated_constraint"
+  ]
+}

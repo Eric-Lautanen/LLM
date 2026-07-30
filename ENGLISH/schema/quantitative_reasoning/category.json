@@ -1,0 +1,17 @@
+{
+  "category": "quantitative_reasoning",
+  "foundation_roi": "high",
+  "slot_count_range": [2, 4],
+  "requires_binding": false,
+  "phase_in_scale": "100M",
+  "valid_abstraction_levels": ["metacognitive", "procedural", "pattern_recognition", "declarative"],
+  "valid_formats": ["single_turn", "multi_turn", "lecture", "rubber_duck", "adversarial"],
+  "subtypes": [
+    "complexity_estimation",
+    "back_of_envelope_calculation",
+    "probability_for_testing",
+    "statistical_reasoning",
+    "boolean_and_logic",
+    "geometric_spatial_reasoning"
+  ]
+}
